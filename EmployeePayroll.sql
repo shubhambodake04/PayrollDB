@@ -19,7 +19,8 @@ insert into employee_payroll values
 ('Tom',300000.0,'2021-01-20');
 
 select salary from employee_payroll where name='Billi'
-select * from employee_payroll where start between '2019-01-01' and GETDATE()  
+select * from employee_payroll where start between '2019-01-01' and GETDATE() 
+select * from employee_payroll where gender='M'  
 
 alter table employee_payroll add gender char(1);
 
@@ -52,3 +53,5 @@ update employee_payroll set department = 'Marketing' where name = 'Terisa'
 
 insert into employee_payroll values
 ('Mark',250000.0,'2020-05-23','F','7755446633','MD Road','Sales',1000,2000,3000,4000)
+
+SELECT SUM(basic_pay) FROM employee_payroll
